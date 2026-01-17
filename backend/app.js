@@ -16,4 +16,13 @@ app.get('/', (req, res) => {
   res.json({ message: 'API Artisans' });
 });
 
+const categoriesRoutes = require('./routes/categories');
+app.use ('/categories', categoriesRoutes);
+
+const specialitesRoutes = require ('./routes/specialites');
+app.use ('/specialites', specialitesRoutes);
+
+const artisansRoutes = require ('./routes/artisans');
+app.use ('/artisans', artisansRoutes);
+
 module.exports = app;
