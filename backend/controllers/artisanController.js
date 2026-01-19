@@ -30,6 +30,12 @@ const getTopArtisans = async (req, res) => {
     try {
         const topartisans = await Artisan.findAll({
             where: { top_artisans: true},
+            attributes: [
+                'id_artisans',
+                'nom_artisans',
+                'note_artisans',
+                'ville_artisans',
+            ],
             order: [['note_artisans', 'DESC']],
             limit: 3,
             include: {
@@ -43,11 +49,13 @@ const getTopArtisans = async (req, res) => {
     }
 };
 
+//Récupérer tous les artisans d'une même spécialité
 const getArtisansBySpecialites = async (req, res) => {
     try {
         const {id} = req.params;
 
         const artisansbyspe = await Artisan.findAll({
+            where: { id_specialites: id},
             attributes: [
                 'id_artisans',
                 'nom_artisans',
@@ -57,7 +65,6 @@ const getArtisansBySpecialites = async (req, res) => {
                 'site_web_artisans',
                 'top_artisans'
             ],
-            where: { id_specialites: id},
             include:{
                 model: Specialite,
                 attributes:['id_specialites', 'nom_specialites']
