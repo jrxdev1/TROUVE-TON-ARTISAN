@@ -7,7 +7,7 @@ const getAllArtisans = async (req, res) => {
         const { search } = req.query;
 
         const where = search 
-        ? { nom_artisans: { [Op.like]: `%{search}` } }
+        ? { nom_artisans: { [Op.like]: `%${search}` } }
         : {};
 
         const artisans = await Artisan.findAll({
@@ -76,5 +76,26 @@ const getArtisansBySpecialites = async (req, res) => {
     }
 };
 
+const getArtisansById = async (req, res) => {
+    try {
+        const {id} = req.params;
 
-module.exports = {getAllArtisans, getTopArtisans, getArtisansBySpecialites};
+        const artisansbyid = await Artisan.findOne( {
+            where: { id_artisans: id }, // je décide ici que id correspond à id_artisans de la BDD
+            include:{
+                model: Specialite,
+            }
+        });
+
+        if (!artisansbyid) {
+            return res.status(404).json({message: "Artisan non trouvé"})
+        };
+        
+        res.json(artisansbyid);
+    } catch (error) {
+        res.status(500).json({ message: "erreur serveur" });
+    }
+};
+
+
+module.exports = {getAllArtisans, getTopArtisans, getArtisansBySpecialites, getArtisansById};
