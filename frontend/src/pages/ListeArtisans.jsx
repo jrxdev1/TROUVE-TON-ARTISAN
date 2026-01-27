@@ -17,16 +17,18 @@ function ListeArtisans () {
     }, [id]);
 
     return (
-        <section>
+        <section className='artisans'>
         <h1>Artisans de la spécialité</h1>
         {artisans.length === 0 ? (
             <p>Aucun artisan trouvé.</p>
         ) : (
-            <div className="cards-container">
-                {artisans.map(artisan => (
-                    <Cards key={artisan.id_artisans} artisan={artisan} />
-                ))}
+            <div className='container top-container'>
+                <div className='container-specialite row'>
+                    {artisans.map(artisan => (
+                        <Cards key={artisan.id_artisans} artisan={artisan} className='col'/>
+                    ))}
                 </div>
+            </div>
             )}
         </section>
     );

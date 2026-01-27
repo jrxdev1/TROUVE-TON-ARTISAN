@@ -38,19 +38,37 @@ function Header() {
     };
 
     return (
-        <nav className='navbar navbar-expand-lg bg-light'>
-            <div className='container-fluid'>
-                <img src="../src/assets/images/Logo.png" alt="" onClick={() => navigate("/")} className='col-sm-2'/>
-                
-                <form onSubmit={handleSearch} className='d-flex ms-3'>
-                    <input type="text" className='form-control me-2' placeholder='Rechercher un artisan' value={search} onChange={(e) => setSearch(e.target.value)} />
-                    <button type='submit' className='btn btn-outline-success'>Rechercher</button>
-                </form>    
+        <header className='navbar navbar-expand-lg'>
+            <div className='container-fluid d-flex align-items-center header-position'>
+                {/* LOGO */}
+                <div className='logo-container'>
+                    <img src="../src/assets/images/Logo.png" alt="Logo" onClick={() => navigate("/")} className='img-fluid logo'/>
+                </div>
 
-                <div className='collapse navbar-collapse'>
-                    <ul className='nav-item dropdown ms-auto'>
+                {/* RECHERCHE */}
+                <div className='center-navbar flex-grow-1 d-flex justify-content-center'>
+                    <form onSubmit={handleSearch} className='search-form d-flex align-items-center'>
+                        <input type="text" className='form-control search-input' placeholder='Rechercher un artisan' value={search} onChange={(e) => setSearch(e.target.value)} />
+                        <button type='submit' className='btn'>
+                            <img src="../src/assets/images/loupe.png" alt="Rechercher" />
+                        </button>
+                    </form>
+                </div>
+
+                {/* BOUTON BURGER */}
+                <button
+                className="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarContent">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+
+                {/* MENU */}
+                <div className='collapse navbar-collapse' id='navbarContent'>
+                    <ul className='navbar-nav ms-auto'>
                         {categories.map(categorie => (
-                            <li key={categorie.id_categorie} className='nac-item dropdown'>
+                            <li key={categorie.id_categorie} className='nav-item dropdown'>
                                 <span className='nav-link dropdown-toggle' onClick={()=> toggleCategorie(categorie.id_categories)}>{categorie.nom_categories}</span>
                                 {openCategorie === categorie.id_categories && (
                                 <ul className='dropdown-menu show'>
@@ -68,7 +86,7 @@ function Header() {
                     </ul>
                 </div>
             </div>
-        </nav>
+        </header>
     );
 };
 

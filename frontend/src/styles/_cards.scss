@@ -1,0 +1,20 @@
+.card {
+    max-width: 400px;
+    border-radius: 30px;
+}
+
+.card:hover {
+     box-shadow: 0 10px 20px rgba($color: #dedede, $alpha: 1.0);
+
+}
+
+.cards-artisans {
+    gap: 30px;
+    margin: 20px 0 20px 0;
+}
+
+.cards-section {
+    padding: 20px;
+}
+
+
