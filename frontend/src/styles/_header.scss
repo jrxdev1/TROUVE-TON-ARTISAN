@@ -1,0 +1,112 @@
+.navbar {
+    background-color: $tertiary-color;
+    color: white;
+    padding: 0 50px 0 50px;
+    min-height: 150px;
+    
+    .header-position {
+    gap: 20px;
+    }
+
+
+
+// Menu déroulant des catégories
+    .navbar-nav {
+        gap: 20px;
+        display: flex;
+        flex-direction: row;
+        .nav-link {
+            cursor: pointer;
+            color: white;
+            }
+        .nav-item {
+            background-color: $tertiary-color;
+            border-radius: 10px;
+            padding: 5px 5px;
+        }
+        .dropdown-menu {
+            min-width: 110px;
+        }
+    }
+    .nav-link:hover {
+        color: $sixth-color;
+    }
+
+    .navbar-toggler {
+        color: white;
+    }
+
+    @media (max-width: 992px){
+        .navbar-collapse {
+            align-items: flex-start;
+        }
+        .navbar-nav {
+            width: 100%;
+            align-items: flex-start;
+            text-align: right;
+        }
+        .nav-item {
+            width: 100%;
+        }
+        .dropdown-menu {
+            position: static;
+            float: none;
+            width: 100%;
+            margin-right: 10px;
+        }
+        
+    }
+
+//Barre de recherche
+    .center-navbar {
+        width: 100%;
+        max-width: 1000px;
+        min-height: 50px;
+
+        @media (max-width: 992px) {
+            max-width: 200px;
+        }
+        @media (max-width: 576px) {
+            max-width: 100px;
+        }
+        
+        .btn {
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        .search-form {
+            background-color: $primary-color;
+            border-radius: 20px;
+            padding: 6px;
+            max-width: 400px;
+            width: 100%;
+        }
+        .search-input {
+            border: none;
+            background-color: $primary-color;
+            outline: none;
+            box-shadow: none;
+        }
+    }
+
+//Logo
+    .logo-container{
+            background-color: white;
+            border-radius: 10px;
+            min-width: 40px;
+        }
+        .logo {
+            max-height: 200px;
+
+            @media (max-width: 992px) {
+                max-height: 75px;
+            }
+            @media (max-width: 576px) {
+                max-height: 55px;
+            }
+        }
+}
+

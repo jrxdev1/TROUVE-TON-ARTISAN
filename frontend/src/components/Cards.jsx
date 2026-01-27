@@ -4,12 +4,13 @@ function Cards ({artisan}) {
 
     return (
         <div className="card">
-            <h2>{artisan.nom_artisans}</h2>
-            <p> Spécialités : {artisan.Specialite?.nom_specialites}</p>
-            <p> Ville : {artisan.ville_artisans}</p>
-            <p> Note : {artisan.note_artisans}</p>
-
-            <Link to={`/ficheartisans/${artisan.id_artisans}`}>Voir la fiche de l'artisan</Link>
+            <div className="card-body">
+                <h3 className="card-title">{artisan.nom_artisans}</h3>
+                <h4 className="card-subtitle"> Spécialités : {artisan.Specialite?.nom_specialites}</h4>
+                <p className="card-text"> Ville : {artisan.ville_artisans}</p>
+                <p className="card-note"> Note : {artisan.note_artisans}</p>
+                <Link to={`/ficheartisans/${artisan.id_artisans}`} className="card-link">Voir la fiche de l'artisan</Link>
+            </div>  
         </div>
     )
 }

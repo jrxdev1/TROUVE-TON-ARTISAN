@@ -1,9 +1,9 @@
 function Error () {
     return (
-        <>
-        <p>PAGE EN COURS DE CONSTRUCTION</p>
-        <img src="../src/assets/images/pexels-padrinan-2882552.jpg" alt="" />
-        </>
+        <div className="error-page">
+        <h1>Page en cours de construction ...</h1>
+        <img src="../src/assets/images/pexels-padrinan-2882552.jpg" alt="" className="error-photo"/>
+        </div>
     )
 }
 

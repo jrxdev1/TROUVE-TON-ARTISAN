@@ -16,12 +16,14 @@ function TopArtisans() {
     }, []); 
 
     return (
-        <section>
+        <section className='cards-section'>
             <h2>Les artisans du mois</h2>
-            <div className='cards-artisans'>
-                {artisans.map(artisan => (
-                    <Cards key={artisan.id_artisans} artisan={artisan} />
-                ))}
+            <div className='container'>
+                <div className='cards-artisans row'>
+                    {artisans.map(artisan => (
+                        <Cards key={artisan.id_artisans} artisan={artisan}/>
+                    ))}
+                </div>
             </div>
         </section>
     );

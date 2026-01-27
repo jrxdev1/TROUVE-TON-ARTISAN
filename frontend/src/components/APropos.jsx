@@ -1,6 +1,6 @@
 function APropos ({texte}) {
     return (
-        <div>
+        <div className="propos">
             <h2>A Propos</h2>
             <p>{texte}</p>
         </div>
