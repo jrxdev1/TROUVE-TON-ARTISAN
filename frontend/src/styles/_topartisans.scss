@@ -1,0 +1,28 @@
+.cards-section {
+    padding: 20px;
+
+    h2{
+        margin-bottom: 40px;
+    }
+
+    .trait {
+        width: 100%;
+        max-width: 200px;
+        @media (max-width: 992px) {
+            max-width: 100px;
+        }
+        @media (max-width: 576px) {
+            max-width: 50px;
+        }
+        border: 5px solid $fifth-color;
+        border-radius: 30px;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+}
+
+.cards-artisans {
+    gap: 50px;
+    margin: 20px 0 20px 0;
+    justify-content: center;
+}

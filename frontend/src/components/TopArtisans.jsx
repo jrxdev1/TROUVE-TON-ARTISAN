@@ -17,7 +17,8 @@ function TopArtisans() {
 
     return (
         <section className='cards-section'>
-            <h2>Les artisans du mois</h2>
+            <h2>Les top artisans du mois</h2>
+            <div className='trait'></div>
             <div className='container'>
                 <div className='cards-artisans row'>
                     {artisans.map(artisan => (

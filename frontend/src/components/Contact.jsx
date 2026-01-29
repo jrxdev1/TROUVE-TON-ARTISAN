@@ -1,7 +1,7 @@
 function Contact () {
     return (
-        <div>
-            <h2>Formulaire de contact avec l'artisan</h2>
+        <div className="contact">
+            <h2>Formulaire de contact</h2>
             
             <form action="" className="container formulaire">
                 <div className="champs">
@@ -26,7 +26,7 @@ function Contact () {
                         <textarea type="text" className="form-control" placeholder="..." required/>
                     </div>
                 </div>
-                <button type="submit" className="btn btn-primary">Envoyer</button>
+                <button type="submit" className="btn">Envoyer</button>
             </form>
         </div>
     )

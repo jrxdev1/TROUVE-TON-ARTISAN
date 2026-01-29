@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import FicheArtisans from './pages/FicheArtisans';
 import ListeArtisans from './pages/ListeArtisans';
 import Error from './pages/Error';
+import MentionsLegales from './pages/LegalNotice';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       <Route path='/ficheartisans/:id' element={<FicheArtisans></FicheArtisans>}></Route>
       <Route path='/specialite/:id' element={<ListeArtisans></ListeArtisans>}></Route>
       <Route path='/error' element={<Error></Error>}></Route>
+      <Route path='/legalnotice' element={<MentionsLegales></MentionsLegales>}></Route>
     </Routes>
     <Footer></Footer>
     </BrowserRouter>
