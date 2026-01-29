@@ -1,0 +1,17 @@
+.propos {
+    padding: 40px 0 40px 0;
+    background-color: $primary-color;
+
+    p {
+        max-width: 1000px;
+        margin: auto;
+        text-align: left;
+
+        @media (max-width: 992px) {
+        max-width: 600px;
+        }
+        @media (max-width: 576px) {
+            max-width: 300px;
+        }
+    }
+}

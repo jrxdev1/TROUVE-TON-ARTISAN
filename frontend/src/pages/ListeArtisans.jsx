@@ -23,7 +23,7 @@ function ListeArtisans () {
             <p>Aucun artisan trouvé.</p>
         ) : (
             <div className='container top-container'>
-                <div className='container-specialite row'>
+                <div className='specialite row'>
                     {artisans.map(artisan => (
                         <Cards key={artisan.id_artisans} artisan={artisan} className='col'/>
                     ))}

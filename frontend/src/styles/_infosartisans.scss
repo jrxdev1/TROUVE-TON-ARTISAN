@@ -1,0 +1,62 @@
+.background-fiche {
+    background-image: url("../assets/images/background-fiche.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-height: 500px;
+    height: 100%;
+    width: 100%;
+}
+
+.infos {
+    padding: 40px 0 40px 0;
+
+    max-width: 1000px;
+    min-height: 500px;
+    margin: auto;
+    text-align: left;
+
+   @media (max-width: 992px) {
+    max-width: 600px;
+    min-height: 200px;
+    }
+    @media (max-width: 576px) {
+        max-width: 300px;
+        min-height: 100px;
+    }
+
+    .nom {
+        text-align: center;
+        padding: 20px 0 20px 0;
+
+        h2 {
+            margin-bottom: 20px;
+        }
+    }
+
+    .container-infos {
+
+        .ville {
+            align-content: center;
+            font-weight: 500;
+            font-size: 1.2rem;
+        }
+        .image-note{
+            align-content: center;
+
+            img {
+                min-width: 100px;
+                margin-bottom: 10px;
+                border: 0.5px;
+                border-style: solid;
+                border-radius: 20px;
+                border-color: $fourth-color;
+                padding: 5px;
+            }
+            p {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+

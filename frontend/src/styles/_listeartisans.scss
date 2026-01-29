@@ -1,11 +1,27 @@
 .artisans {
-    padding-top: 20px;
+    padding: 40px 0 40px 0;
+    background-image: url("../assets/images/outils.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: lighten;
+    height: 100%;
+    max-height: 1000px;
+    min-height: 900px;
+
+    h1{
+        margin-bottom: 40px;
+    }
 }
 
 .top-container {
     padding: 20px 0 20px 0;
 }
 
-.container-specialite {
-    gap: 20px;
+.specialite {
+    gap: 50px;
+    margin: 20px 0 20px 0;
+    justify-content: center;
 }
+
