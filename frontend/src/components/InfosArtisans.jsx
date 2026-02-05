@@ -1,3 +1,5 @@
+import Etoiles from "./Etoiles"
+
 function InfosArtisans({ artisan }) {
   return (
     <div className="background-fiche">
@@ -14,10 +16,11 @@ function InfosArtisans({ artisan }) {
             <div className="col image-note">
               <img
                 src="../src/assets/images/favicon-32.png"
-                alt=""
+                alt="photo de l'artisan"
               />
               <p>{artisan.note_artisans} / 5</p>
-              <a href={artisan.site_web_artisans} target="_blank" className="">
+              <Etoiles note={artisan.note_artisans}></Etoiles>
+              <a href={artisan.site_web_artisans} target="_blank">
                 Site web de l'artisan
               </a>
             </div>

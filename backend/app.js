@@ -25,4 +25,7 @@ app.use ('/specialites', specialitesRoutes);
 const artisansRoutes = require ('./routes/artisans');
 app.use ('/artisans', artisansRoutes);
 
+const contactRoutes = require ('./routes/contact');
+app.use ('/contact', contactRoutes);
+
 module.exports = app;

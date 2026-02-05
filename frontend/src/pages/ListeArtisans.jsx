@@ -9,6 +9,10 @@ function ListeArtisans () {
     const [artisans, setArtisans] = useState([]);
 
     useEffect(() => {
+        document.title = `Spécialités d'artisans | Trouve ton artisan`;
+    }, []);
+
+    useEffect(() => {
         api.get(`/artisans/specialite/${id}`)
             .then(res => {
                 setArtisans(res.data);
@@ -16,9 +20,12 @@ function ListeArtisans () {
             .catch(err => console.error(err));
     }, [id]);
 
+    //Afficher en h1 le nom de la spécialité
     return (
         <section className='artisans'>
-        <h1>Artisans de la spécialité</h1>
+        <h1>{artisans.length > 0
+        ? `Artisans – ${artisans[0].Specialite?.nom_specialites}`
+        : 'Artisans de la spécialité'}</h1>
         {artisans.length === 0 ? (
             <p>Aucun artisan trouvé.</p>
         ) : (

@@ -1,6 +1,12 @@
 import TopArtisans from "../components/TopArtisans";
+import { useEffect } from "react";
 
 function Home () {
+
+     useEffect(() => {
+            document.title = `Trouve ton artisan | Page d'accueil`;
+        }, []);
+
     return (
         <section>
             <div className="background"></div>
