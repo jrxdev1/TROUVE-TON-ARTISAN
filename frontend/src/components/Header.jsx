@@ -42,7 +42,7 @@ function Header() {
             <div className='container-fluid d-flex align-items-center header-position'>
                 {/* LOGO */}
                 <div className='logo-container'>
-                    <img src="../src/assets/images/Logo.png" alt="Logo" onClick={() => navigate("/")} className='img-fluid logo'/>
+                    <img src="../src/assets/images/Logo.png" alt="Logo de la region" onClick={() => navigate("/")} className='img-fluid logo'/>
                 </div>
 
                 {/* RECHERCHE */}
