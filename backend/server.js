@@ -3,6 +3,7 @@ const sequelize = require('./config/db');
 
 // Définir le port
 const PORT = process.env.PORT || 5000;
+app.listen(PORT);
 
 // Lancer le serveur + API
 (async () => {
