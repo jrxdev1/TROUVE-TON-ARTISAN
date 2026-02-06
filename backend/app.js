@@ -7,9 +7,12 @@ const app = express();
 
 app.use(express.json());
 app.use(helmet());
-app.use(cors(
-    {origin: 'http://localhost:5173'} // Le front React
-));
+app.use(cors({
+  origin: [ // Le front React
+      'http://localhost:5173',
+      'https://trouve-ton-artisan.vercel.app'
+    ]
+  }));
 
 // Routes API
 app.get('/', (req, res) => {
