@@ -68,14 +68,14 @@ function Header() {
                 <div className='collapse navbar-collapse' id='navbarContent'>
                     <ul className='navbar-nav ms-auto'>
                         {categories.map(categorie => (
-                            <li key={categorie.id_categorie} className='nav-item dropdown'>
+                            <li key={categorie.id_categories} className='nav-item dropdown'>
                                 <span className='nav-link dropdown-toggle' onClick={()=> toggleCategorie(categorie.id_categories)}>{categorie.nom_categories}</span>
                                 {openCategorie === categorie.id_categories && (
                                 <ul className='dropdown-menu show'>
                                     {categorie.Specialites.map(spe => (
                                         <li key={spe.id_specialites}>
                                         <Link to={`/specialite/${spe.id_specialites}`} className='dropdown-item'>
-                                        {spe.nom_specialites}   
+                                        {spe.nom_specialites}
                                         </Link>
                                         </li>
                                     ))}

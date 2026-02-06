@@ -12,11 +12,11 @@ function Cards ({artisan}) {
                     <p className="card-text">{artisan.ville_artisans}</p>
                     <p className="card-note">{artisan.note_artisans} / 5</p>
                     <Etoiles note={artisan.note_artisans}></Etoiles>
-                    <Link to={`/ficheartisans/${artisan.id_artisans}`} className="card-link">Voir la fiche de l'artisan</Link>
+                    <p className="card-link">Voir la fiche de l'artisan</p>
                 </div>
             </div>
         </Link>
-    )
+    );
 }
 
 export default Cards
