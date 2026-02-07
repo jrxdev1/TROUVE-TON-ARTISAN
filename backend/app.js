@@ -10,7 +10,7 @@ app.use(helmet());
 app.use(cors({
   origin: [ // Le front React
       'http://localhost:5173',
-      'https://trouve-ton-artisan.vercel.app'
+      'https://artisans-aura.vercel.app'
     ]
   }));
 
